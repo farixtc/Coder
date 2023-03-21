@@ -1,9 +1,14 @@
-from django.shortcuts import render,HttpResponse
+from django.http import HttpResponse
+from django.shortcuts import render
 from AppCoder.models import Curso
 
-def curso(self):
-    curso = Curso(nombre="Desarrollo web", camada="19881")
-    curso.save()
-    documentoDeTexto= f"-->Curso: {curso.nombre} Camada: {curso.camada}"
-        
-    return HttpResponse(documentoDeTexto)
+
+
+def cursos(request):
+    return render(request, "index.html")
+def estudiantes(request):
+    pass
+
+
+def profesores(request):
+    pass
